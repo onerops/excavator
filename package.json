@@ -1,0 +1,25 @@
+{
+  "name": "test_app",
+  "private": true,
+  "dependencies": {
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "4.2.2",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.13.0",
+    "turbolinks": "^5.2.0",
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.2",
+    "vue-router": "^3.1.6",
+    "vue-template-compiler": "^2.6.11",
+    "vue2-google-maps": "^0.10.7",
+    "vuex": "^3.3.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "webpack-dev-server": "^3.10.3"
+  }
+}

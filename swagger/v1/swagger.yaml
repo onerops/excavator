@@ -1,0 +1,70 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/tickets.json":
+    post:
+      summary: Creates a ticket and excavator
+      tags:
+      - Tickets
+      parameters: []
+      responses:
+        '201':
+          description: ticket created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                required:
+                - success
+        '422':
+          description: invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  errors:
+                    type: object
+                required:
+                - success
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                RequestNumber:
+                  type: string
+                SequenceNumber:
+                  type: string
+                RequestType:
+                  type: string
+                DateTimes:
+                  type: object
+                Excavator:
+                  type: object
+                ServiceArea:
+                  type: object
+                ExcavationInfo:
+                  type: object
+              required:
+              - RequestNumber
+              - SequenceNumber
+              - RequestType
+              - DateTimes
+              - Excavator
+              - ServiceArea
+              - ExcavationInfo
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: peaceful-reaches-99763.herokuapp.com
